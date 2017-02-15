@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 
-// https://github.com/James-Oldfield/react-paint/blob/dev/src/index.js
 export class ReactPainter extends Component {
 
     static propTypes = {

@@ -4,11 +4,11 @@
   "description": "test",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/marborkowski/react-painter"
   },
   "license": "MIT",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/marborkowski/react-painter/issues"
   },
   "homepage": "",
   "author": "Marcin Borkowski",
