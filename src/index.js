@@ -17,9 +17,11 @@ export class ReactPainter extends Component {
         className: 'react-painter',
         width: 800,
         height: 600,
-        style: {},
+        style: {
+            border: '1px solid #ccc'
+        },
         lineThickness: 10,
-        lineColor: 'green',
+        lineColor: '#333333',
         lineStyle: 'round', // acceptable: bevel, round, miter
         onUpdate: () => {}
     }
@@ -65,8 +67,8 @@ export class ReactPainter extends Component {
         this.ctx.lineWidth = lineThickness;
         this.ctx.strokeStyle = lineColor;
         this.ctx.lineJoin = this.ctx.lineCap = lineStyle;
-        this.ctx.shadowBlur = 10;
-        this.ctx.shadowColor = 'rgb(0, 0, 0)';
+        this.ctx.shadowBlur = 2;
+        this.ctx.shadowColor = this.props.lineColor;
     }
 
     onMouseDown = event => {
