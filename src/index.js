@@ -7,6 +7,7 @@ export class ReactPainter extends Component {
         width: PropTypes.number,
         height: PropTypes.number,
         style: PropTypes.object,
+        blur: PropTypes.bool,
         lineThickness: PropTypes.number,
         lineColor: PropTypes.string,
         lineStyle: PropTypes.string,
@@ -20,6 +21,7 @@ export class ReactPainter extends Component {
         style: {
             border: '1px solid #ccc'
         },
+        blur: true,
         lineThickness: 10,
         lineColor: '#333333',
         lineStyle: 'round', // acceptable: bevel, round, miter
@@ -67,8 +69,11 @@ export class ReactPainter extends Component {
         this.ctx.lineWidth = lineThickness;
         this.ctx.strokeStyle = lineColor;
         this.ctx.lineJoin = this.ctx.lineCap = lineStyle;
-        this.ctx.shadowBlur = 2;
-        this.ctx.shadowColor = this.props.lineColor;
+
+        if (this.props.blur) {
+            this.ctx.shadowBlur = 2;
+            this.ctx.shadowColor = this.props.lineColor;
+        }
     }
 
     onMouseDown = event => {
