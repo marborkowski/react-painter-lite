@@ -65,6 +65,8 @@ export class ReactPainter extends Component {
         this.ctx.lineWidth = lineThickness;
         this.ctx.strokeStyle = lineColor;
         this.ctx.lineJoin = this.ctx.lineCap = lineStyle;
+        this.ctx.shadowBlur = 10;
+        this.ctx.shadowColor = 'rgb(0, 0, 0)';
     }
 
     onMouseDown = event => {
