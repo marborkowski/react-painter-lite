@@ -3,7 +3,7 @@ react-painter
 
 ## Installation
 
-`npm i react-painter --save`
+`npm i react-painter-lite --save`
 
 ```js
 import React from 'react';
