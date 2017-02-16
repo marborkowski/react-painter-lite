@@ -7,7 +7,7 @@ react-painter
 
 ```js
 import React from 'react';
-import ReactPainter from 'react-painter';
+import ReactPainter from 'react-painter-lite';
 
 const props = {
     onUpdate: (raw) => {
