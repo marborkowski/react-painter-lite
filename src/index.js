@@ -102,6 +102,11 @@ export class ReactPainter extends Component {
 
                 return (match ? false : (this.hashTable[key] = true));
             });
+
+            this.props.onUpdate({
+                raw: this.rawData,
+                canvas: this.canvas
+            });
         }
     }
 
@@ -116,7 +121,6 @@ export class ReactPainter extends Component {
 
             this.rawData.push(coordinates);
             this.drawOnCanvas(coordinates);
-            this.props.onUpdate();
         }
     }
 

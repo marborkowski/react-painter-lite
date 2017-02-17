@@ -1,6 +1,8 @@
 React Painter Lite
 ==================
 
+[![NPM](https://nodei.co/npm/react-painter-lite.png?downloads=true&stars=true)](https://nodei.co/npm/react-painter-lite/)
+
 **React Painter Lite** is the **React** **Component** which allows your users to
 create very simple drawings.
 
@@ -49,6 +51,14 @@ Properties
 | lineColor     | String   | #333333     | Sets the color of the line.                                                             |
 | lineStyle     | String   | round       | Sets the style of the line. It can be ```bevel ```, ```round ```, ```miter ```          |
 | onUpdate      | Function |             | Callback function that is fired when the user stops drawing.                            |
+
+
+Browsers support
+----------------
+
+| [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/edge.png" alt="IE / Edge" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/firefox.png" alt="Firefox" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/chrome.png" alt="Chrome" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/safari.png" alt="Safari" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/opera.png" alt="Opera" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Opera |
+| --------- | --------- | --------- | --------- | --------- |
+| IE11+, Edge| 50+| 49+| 10+| 42+
 
 ### License
 MIT License
