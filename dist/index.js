@@ -152,6 +152,11 @@
 
                         return match ? false : _this.hashTable[key] = true;
                     });
+
+                    _this.props.onUpdate({
+                        raw: _this.rawData,
+                        canvas: _this.canvas
+                    });
                 }
             };
 
@@ -163,7 +168,6 @@
 
                     _this.rawData.push(coordinates);
                     _this.drawOnCanvas(coordinates);
-                    _this.props.onUpdate();
                 }
             };
 
@@ -216,8 +220,11 @@
                 this.ctx.lineWidth = lineThickness;
                 this.ctx.strokeStyle = lineColor;
                 this.ctx.lineJoin = this.ctx.lineCap = lineStyle;
-                this.ctx.shadowBlur = 2;
-                this.ctx.shadowColor = this.props.lineColor;
+
+                if (this.props.blur) {
+                    this.ctx.shadowBlur = 2;
+                    this.ctx.shadowColor = this.props.lineColor;
+                }
             }
         }, {
             key: 'render',
@@ -260,6 +267,7 @@
         width: _react.PropTypes.number,
         height: _react.PropTypes.number,
         style: _react.PropTypes.object,
+        blur: _react.PropTypes.bool,
         lineThickness: _react.PropTypes.number,
         lineColor: _react.PropTypes.string,
         lineStyle: _react.PropTypes.string,
@@ -272,6 +280,7 @@
         style: {
             border: '1px solid #ccc'
         },
+        blur: true,
         lineThickness: 10,
         lineColor: '#333333',
         lineStyle: 'round', // acceptable: bevel, round, miter
